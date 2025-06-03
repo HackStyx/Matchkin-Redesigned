@@ -58,10 +58,10 @@
   <a href="https://matchkin-redesigned.vercel.app/">
     <img src="https://img.shields.io/badge/Live_Demo-Visit_Site-FF5757?style=for-the-badge&logo=vercel&logoColor=white&labelColor=FF5757" alt="Live Demo" />
   </a>
-  <a href="https://github.com/yourusername/matchkin-landing/pulls">
+  <a href="https://github.com/HackStyx/Matchkin-Redesigned/pulls">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&logo=github&logoColor=white&labelColor=2EA44F" alt="PRs Welcome" />
   </a>
-  <a href="LICENSE">
+  <a href="https://github.com/HackStyx/Matchkin-Redesigned/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=E9B44C" alt="License" />
   </a>
 </div>
@@ -211,10 +211,10 @@ Our landing page showcases:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/matchkin-landing.git
+git clone https://github.com/HackStyx/Matchkin-Redesigned.git
 
 # Navigate to the project
-cd matchkin-landing
+cd Matchkin-Redesigned
 
 # Install dependencies
 npm install
