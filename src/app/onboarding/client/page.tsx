@@ -43,6 +43,17 @@ const step1Schema = z.object({
   companyName: z.string().optional(),
   email: z.string().email('Please enter a valid email address'),
   phone: z.string().optional(),
+  
+  // Include optional fields from other steps to ensure type compatibility
+  industry: z.string().optional(),
+  companySize: z.string().optional(),
+  projectTypes: z.string().optional(),
+  companyDescription: z.string().optional(),
+  minBudget: z.string().optional(),
+  maxBudget: z.string().optional(),
+  timeline: z.string().optional(),
+  referralSource: z.string().optional(),
+  additionalInfo: z.string().optional(),
 }).refine((data) => {
   // If account type is individual, firstName and lastName are required
   if (data.accountType === 'individual') {
@@ -56,13 +67,42 @@ const step1Schema = z.object({
 });
 
 const step2Schema = z.object({
+  // Include fields from step 1 to ensure type compatibility
+  accountType: z.enum(['individual', 'company']).optional(),
+  firstName: z.string().optional(),
+  lastName: z.string().optional(),
+  companyName: z.string().optional(),
+  email: z.string().optional(),
+  phone: z.string().optional(),
+  
+  // Step 2 fields with validation
   industry: z.string().min(1, 'Please select an industry'),
   companySize: z.string().min(1, 'Please select a company size'),
   projectTypes: z.string().optional(),
   companyDescription: z.string().optional(),
+  
+  // Include optional fields from step 3
+  minBudget: z.string().optional(),
+  maxBudget: z.string().optional(),
+  timeline: z.string().optional(),
+  referralSource: z.string().optional(),
+  additionalInfo: z.string().optional(),
 });
 
 const step3Schema = z.object({
+  // Include fields from steps 1 and 2 to ensure type compatibility
+  accountType: z.enum(['individual', 'company']).optional(),
+  firstName: z.string().optional(),
+  lastName: z.string().optional(),
+  companyName: z.string().optional(),
+  email: z.string().optional(),
+  phone: z.string().optional(),
+  industry: z.string().optional(),
+  companySize: z.string().optional(),
+  projectTypes: z.string().optional(),
+  companyDescription: z.string().optional(),
+  
+  // Step 3 fields
   minBudget: z.string().optional(),
   maxBudget: z.string().optional(),
   timeline: z.string().optional(),
